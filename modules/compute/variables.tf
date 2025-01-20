@@ -47,5 +47,5 @@ variable "db_security_group_id" {
 variable "name" {
   description = "Project name"
   type        = string
-  default     = "Kinetic-Technologies"
+  default     = "MyApp"
 }
