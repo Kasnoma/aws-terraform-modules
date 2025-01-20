@@ -8,7 +8,7 @@ terraform {
   
   required_version = ">= 1.0"
    backend "s3" {
-     bucket = "kinetics-terraform-state-1a"
+     bucket = "your-bucket-name-terraform-state-1a"
      key    = "terraform/state" 
      region = "us-east-1" 
    }
@@ -40,28 +40,6 @@ module "compute" {
   db_security_group_id   = module.networking.db_security_group_id
 }
 
-# module "database" {
-#   source                = "../database"
-#   allocated_storage     = 50
-#   engine                = "postgres"
-#   engine_version        = "14.5"
-#   instance_class        = "db.t3.medium"
-#   db_name               = "mydatabase"
-#   username              = "admin"
-#   password              = "securepassword123"
-#   parameter_group_name  = null
-#   publicly_accessible   = false
-#   skip_final_snapshot   = true
-#   vpc_security_group_ids = ["sg-12345678"]
-#   db_subnet_group_name  = "my-db-subnet-group"
-#   multi_az              = true
-#   storage_encrypted     = true
-#   backup_retention_period = 7
-#   tags = {
-#     Environment = "Production"
-#     Project     = "MyApp"
-#   }
-# }
 
 module "database" {
   source                = "../modules/database"
