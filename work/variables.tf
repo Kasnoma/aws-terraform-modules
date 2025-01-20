@@ -84,13 +84,13 @@ variable "instance_class" {
 variable "db_name" {
   description = "The name of the database."
   type        = string
-  default     = "kinetics"
+  default     = "myapp"
 }
 
 variable "username" {
   description = "The master username for the database."
   type        = string
-  default     = "kineticsmaster"
+  default     = "myappmaster"
 }
 
 variable "password" {
@@ -125,7 +125,7 @@ variable "skip_final_snapshot" {
 variable "db_subnet_group_name" {
   description = "The name of the DB subnet group."
   type        = string
-  default     = "kinetic-subnet-group"
+  default     = "myapp-subnet-group"
 }
 
 variable "multi_az" {
