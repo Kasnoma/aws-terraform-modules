@@ -1,5 +1,5 @@
-resource "aws_db_subnet_group" "kinetic" {
-  name       = "kinetic-subnet-group"
+resource "aws_db_subnet_group" "hellworld" {
+  name       = "myapp-subnet-group"
   subnet_ids = var.subnet_id  # Pass subnet IDs as input
   
   tags = {
@@ -37,35 +37,3 @@ resource "aws_db_instance" "this" {
     Environment =var.environment
   }
 }
-
-
-
-
- # root-module/main.tf
-
-# module "database" {
-#   source = "../database-module" # Path to the database module
-
-#   allocated_storage      = 20
-#   storage_type           = "gp2"
-#   engine                 = "mysql"
-#   engine_version         = "8.0"
-#   instance_class         = "db.t3.micro"
-#   db_name                = "exampledb"
-#   username               = "admin"
-#   password               = "securepassword"
-#   parameter_group_name   = "default.mysql8.0"
-#   publicly_accessible    = false
-#   vpc_security_group_ids = ["sg-0123456789abcdef0"]
-#   db_subnet_group_name   = "example-subnet-group"
-#   multi_az               = false
-#   backup_retention_period = 7
-#   skip_final_snapshot    = true
-
-#   subnet_ids = ["subnet-0123456789abcdef0", "subnet-abcdef0123456789"]
-
-#   tags = {
-#     Name        = "example-database"
-#     Environment = "production"
-#   }
-# }
