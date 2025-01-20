@@ -21,7 +21,7 @@ variable "environment" {
 variable "name" {
   description = "Project name"
   type        = string
-  default     = "Kinetic-Technologies"
+  default     = "MYAPP"
 }
 
 variable "public_subnet_cidrs" {
