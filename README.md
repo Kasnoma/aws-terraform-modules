@@ -1,7 +1,3 @@
-Here's a basic README structure for your repository, assuming it's focused on managing AWS infrastructure with Terraform:
-
----
-
 # SAMPLE AWS Infrastructure
 
 This repository contains Terraform configurations to deploy and manage various AWS infrastructure components. The project structure is modular, with separate modules for computing, databases, and networking resources.
@@ -54,7 +50,6 @@ It is designed to be modular, enabling easy scaling and adaptation of infrastruc
 
 ```bash
 git clone https://github.com/your-username/kinetic-aws.git
-cd kinetic-aws
 ```
 
 ### Initialize Terraform
