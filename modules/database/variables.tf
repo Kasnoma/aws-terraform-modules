@@ -35,7 +35,7 @@ variable "password" {
 variable "db_identifier" {
   description = "The master password for the database."
   type        = string
-  default = "kineticTechdb0212"
+  default = "myApP0212"
 }
 
 variable "parameter_group_name" {
@@ -105,7 +105,7 @@ variable "environment" {
 variable "name" {
   description = "Project name"
   type        = string
-  default     = "Kinetic-Technologies"
+  default     = "MyApp"
 }
 
 variable "db_security_group_id" {
